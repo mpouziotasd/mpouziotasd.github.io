@@ -1,47 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Space Grotesk for bold headings, Roboto Mono for technical details -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Space+Grotesk:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>About Dimitris Mpouziotas</title>
+    <title>Dimitris Mpouziotas | Computer Vision Engineer</title>
     <link rel="stylesheet" href="csslayout/main.css">
-    <style>
-
-    </style>
 </head>
+
 <body>
-<div class="menubar">
-    <nav>
-        <ul class="First">
-            <li class="MyName-Logo">Dimitris Mpouziotas</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-        </ul>
-        <ul>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">ResearchGate</a></li>
+    <!-- Brutalist Navigation -->
+    <nav class="brutal-nav">
+        <div class="nav-brand">
+            <span class="user">Portfolio of Dimitris Mpouziotas</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-item">About</a></li>
+            <li><a href="#projects" class="nav-item">Projects</a></li>
+            <li><a href="#github" class="nav-item">GitHub Projects</a></li>
+            <li><a href="#publications" class="nav-item">Research</a></li>
+            <li><a href="#skills" class="nav-item">Technical Skills</a></li>
+            <li><a href="#lifestyle" class="nav-item">Lifestyle</a></li>
         </ul>
     </nav>
-</div>
 
-<div class="MainContainer", id="animatedContainer">
-    <div class="row1">
-        <div class="aboutmeimg">
-            <img src="figs/DimitrisMpouziotas.JPEG">
-        </div>
-        
-        
-        <div class="aboutme" style="width: 100%;">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-        </div>
-    </div>
-</div>
+    <main>
+        <!-- Hero Section & Expertise -->
+        <section id="hero" class="hero-section">
+            <div class="brutal-card hero-card">
+                <div class="hero-header">
+                    <span class="btn"></span><span class="btn"></span><span class="btn"></span>
+                </div>
+                <div class="hero-body">
+                    <h1 id="hero-name" class="solid-shadow"></h1>
+                    <h2 class="typewriter-container brutal-text"><span id="hero-title"></span><span
+                            class="cursor blink">_</span></h2>
 
+                    <div class="brutal-bio" id="hero-bio"></div>
+
+                    <div class="socials-list" id="hero-socials"></div>
+                </div>
+            </div>
+            
+            <div id="about" class="expertise-marquee-wrapper">
+                <div class="expertise-grid" id="expertise-container"></div>
+            </div>
+        </section>
+
+        <!-- Projects (Bento Grid) -->
+        <section id="projects" class="content-section reveal">
+            <h2 class="section-title brutal-hl">Projects</h2>
+            <div class="bento-grid" id="projects-grid"></div>
+        </section>
+
+        <!-- GitHub Repositories (Horizontal Scroll) -->
+        <section id="github" class="content-section reveal">
+            <h2 class="section-title brutal-hl">GitHub Projects</h2>
+            <div class="github-scroll-container" id="github-repositories"></div>
+        </section>
+        
+        <!-- Publications (Timeline) -->
+        <section id="publications" class="content-section reveal">
+            <h2 class="section-title brutal-hl">Research</h2>
+            <div class="timeline" id="publications-timeline"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="content-section reveal">
+            <h2 class="section-title brutal-hl">Technical Skills</h2>
+            <div class="skills-container wrapper-brutal brutal-card">
+                
+                <div class="skills-column">
+                    <h3 class="brutal-subtitle"><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="table-responsive">
+                        <table class="brutal-table">
+                            <thead>
+                                <tr>
+                                    <th>Language</th>
+                                    <th>Proficiency</th>
+                                    <th>Concepts</th>
+                                    <th>Experience</th>
+                                </tr>
+                            </thead>
+                            <tbody id="programming-tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3 class="brutal-subtitle"><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+                    <ul class="brutal-list" id="tech-skills-list"></ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Lifestyle -->
+        <section id="lifestyle" class="content-section reveal">
+            <h2 class="section-title brutal-hl">Lifestyle</h2>
+            <div class="lifestyle-grid" id="lifestyle-container"></div>
+        </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="javascript/app.js"></script>
 </body>
 </html>
